@@ -5,7 +5,7 @@ print(father_path, "==father path==")
 
 pyclue_path = os.path.join(father_path, "PyCLUE")
 sys.path.extend([father_path, pyclue_path])
-
+print(sys.path)
 from PyCLUE.tasks.run_classifier import clue_tasks, configs
 
 # assign GPU devices or CPU devices

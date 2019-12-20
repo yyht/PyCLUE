@@ -18,7 +18,7 @@ from ..utils.configs.model_configs import PRETRAINED_LM_URLS, PRETRAINED_LM_CKPT
 _CWD = os.path.dirname(__file__)
 print(_CWD, '=====')
 DATA_DIR = os.path.abspath(os.path.join(_CWD, "../datasets"))
-PRETRAINED_LM_DIR = os.path.abspath(os.path.join(_CWD, "../pretrained_lm"))
+PRETRAINED_LM_DIR = os.path.abspath(os.path.join(_CWD, "../pretrained_lm")) #'gs://yyht_source/pretrain/test_model/pretrained_lm'
 
 
 def clue_tasks(configs):
