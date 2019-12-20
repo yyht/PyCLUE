@@ -1,6 +1,11 @@
 import os
 import sys
-sys.path.append("../..")
+father_path = os.path.join(os.getcwd())
+print(father_path, "==father path==")
+
+pyclue_path = os.path.join(father_path, "PyCLUE")
+sys.path.extend([father_path, pyclue_path])
+
 from PyCLUE.tasks.run_classifier import clue_tasks, configs
 
 # assign GPU devices or CPU devices
@@ -20,7 +25,7 @@ configs["task_name"] = "afqmc"
 #     Or you can choose the following models:
 #         bert, bert_wwm_ext, albert_xlarge, albert_large, albert_base, albert_base_ext, 
 #         albert_small, albert_tiny, roberta, roberta_wwm_ext, roberta_wwm_ext_large
-configs["pretrained_lm_name"] = "bert"
+configs["pretrained_lm_name"] = "bert_tiny"
 
 # actions
 configs["do_train"] = True

@@ -12,10 +12,11 @@ from ..utils.classifier_utils.core import run_classifier, TaskConfigs, UserConfi
 from ..utils.classifier_utils.core import default_configs as configs
 from ..utils.file_utils import wget, unzip, rm, mkdir, rmdir, mv
 from ..utils.configs.data_configs import DATA_URLS, DATA_PROCESSORS
-from ..utils.configs.model_configs import PRETRAINED_LM_URLS
+from ..utils.configs.model_configs import PRETRAINED_LM_URLS, PRETRAINED_LM_CKPT
 
 
 _CWD = os.path.dirname(__file__)
+print(_CWD, '=====')
 DATA_DIR = os.path.abspath(os.path.join(_CWD, "../datasets"))
 PRETRAINED_LM_DIR = os.path.abspath(os.path.join(_CWD, "../pretrained_lm"))
 
@@ -28,7 +29,7 @@ def clue_tasks(configs):
     if configs.task_name not in DATA_URLS:
         raise ValueError(
             "Not support task: %s" % configs.task_name)
-    if configs.pretrained_lm_name not in PRETRAINED_LM_URLS:
+    if configs.pretrained_lm_name not in PRETRAINED_LM_CKPT:
         raise ValueError(
             "Not support pretrained language model: %s" % configs.pretrained_lm_name)
     processor = DATA_PROCESSORS.get(configs.task_name)

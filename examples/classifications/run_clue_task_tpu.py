@@ -1,4 +1,11 @@
 import os
+import os
+import sys
+father_path = os.path.join(os.getcwd())
+print(father_path, "==father path==")
+
+pyclue_path = os.path.join(father_path, "PyCLUE")
+sys.path.extend([father_path, pyclue_path])
 from PyCLUE.tasks.run_classifier import clue_tasks, configs
 
 # default configs: see PyCLUE.utils.classifier_utils.core

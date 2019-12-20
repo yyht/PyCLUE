@@ -10,7 +10,8 @@ PRETRAINED_LM_DICT = {
     "roberta": "",
     "roberta_wwm_ext": "",
     "roberta_wwm_ext_large": "",
-    "bert_tiny":""
+    "bert_tiny":"",
+    "electra_tiny":""
 }
 
 PRETRAINED_LM_CONFIG = {
@@ -24,8 +25,9 @@ PRETRAINED_LM_CONFIG = {
     "albert_tiny": "albert_config_tiny_g.json",
     "roberta": "bert_config_large.json",
     "roberta_wwm_ext": "bert_config.json",
-    "roberta_wwm_ext_large": "bert_config.json"
-    "bert_tiny":"bert_config_tiny.json"
+    "roberta_wwm_ext_large": "bert_config.json",
+    "bert_tiny":"bert_config_tiny.json",
+    "electra_tiny":"bert_config_tiny.json"
 }
 
 PRETRAINED_LM_CKPT = {
@@ -39,7 +41,9 @@ PRETRAINED_LM_CKPT = {
     "albert_tiny": "albert_model.ckpt",
     "roberta": "roberta_zh_large_model.ckpt",
     "roberta_wwm_ext": "bert_model.ckpt",
-    "roberta_wwm_ext_large": "bert_model.ckpt"
+    "roberta_wwm_ext_large": "bert_model.ckpt",
+    "bert_tiny":"model.ckpt-214830",
+    "electra_tiny":"model.ckpt-644520"
 }
 
 PRETRAINED_LM_URLS = {
